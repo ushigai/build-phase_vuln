@@ -1,9 +1,9 @@
-FROM ubuntu:20.04
+FROM ubuntu:latest
 
 ENV TZ=Asia/Tokyo \
     JAVA_HOME=/usr/lib/jvm/java-8-openjdk-amd64
 RUN ln -snf /usr/share/zoneinfo/$TZ /etc/localtime && echo $TZ > /etc/timezone
-RUN apt-get update \
+RUN apt-get -y update \
     && apt-get -y install python3-pip maven software-properties-common \
     && add-apt-repository ppa:openjdk-r/ppa \
     && apt-get install -y openjdk-8-jdk \
