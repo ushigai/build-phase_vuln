@@ -8,9 +8,5 @@ public class MyExample {
         String cmd = System.getProperty("cmd");
         System.out.println(cmd+" : ");
         logger.error(cmd);
-        //System.out.println(cmd);
-        //System.out.println("This is test message.");
-        //logger.error("Error");
-        //logger.error("${env:SECRET_VALUE:-:}");
     }
 }
